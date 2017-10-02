@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CEEC - Iot Field</title>
+    <link rel="stylesheet" href="CSS/trangchu.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    
+    <script src="ScriptJS/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="mqtt/dist/mqtt.min.js"></script>
+    <script src="ScriptJS/client.js"></script>
+    <script src="ScriptJS/front-end.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-resp">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="center">
+            <div class="wrap-logo">
+                <img class="logo" src="Image/ceec_logo.png" alt="ceec logo">
+                <img class="logo" src="Image/uit_logo.png" alt="uit logo" srcset="">
+            </div>
+            <div id="main-banner">
+                <h1>
+                    Computer Engineering <br/> Embedded Club
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+    <div class="main-menu">
+        <nav class="menu">
+            <ul>
+                <li class="menu-item"><a href="#">
+                    <img src="Image/home.png" alt="home">
+                    <span class="menu-text">Trang chủ</span>
+                </a></li>
+                <li class="menu-item"><a href="#">
+                    <img src="Image/paper.png" alt="paper">
+                    <span class="menu-text">Tin tức</span>    
+                </a></li>
+                <li class="menu-item"><a href="#">
+                    <img src="Image/idcard.png" alt="idcard">
+                    <span class="menu-text">Giới thiệu</span>    
+                </a></li>
+                <li class="menu-item"><a href="#">
+                    <img src="Image/world-wide-web.png" alt="www">
+                    <span class="menu-text">Iot Field</span>    
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="sub-body">   
+        <div class="server-connect">
+            <button id="btnConnect" class="button-server">Connect Server MQTT</button>
+            <button id="btnDisconnect" class="button-server" disabled="true">Disconnect Server MQTT</button>
+            <img id="Connect-loader" src="Image/loader.gif" width="70"/>
+        </div>
+        <span id="connect-notification"></span>
+        <div class="server-data">
+            <form action="">
+                <input id="txtTopic" class="text-send input" type="text" placeholder="TOPIC"/>
+                <textarea id="txtMessage" class="text-send input" placeholder="MESSAGES"></textarea>
+                <input type="button" class="input" id="btnSend" value="Send to Server"/>
+                <textarea type="text" class="text-send input" id="txtDataFromServer" placeholder="MESSAGES FROM SERVER" class="text-send" readonly="true"></textarea>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
